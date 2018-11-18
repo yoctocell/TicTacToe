@@ -11,32 +11,33 @@ Good luck and have fun!
 rules_and_control()
 
 
-def board(p_two_y = 0, p_two_x = 0, p_one_x = 0, p_one_y = 0, just_display = False):
+def board(p2_y=0, p2_x=0, p1_x=0, p1_y=0, just_display=False):
 	board = []
 
 	for i in range(3):
 		board.append(["[ ]"] * 3)
 
-		
 	player_X = '[X]'
 	player_O = '[O]'
 
 	if not just_display:
-		board[p_one_x][p_one_y] = player_X 
-		board[p_two_x][p_two_y] = player_O
+		board[p1_x][p1_y] = player_X 
+		board[p2_x][p2_y] = player_O
 
 	print('   0  1  2')
 	for count, row in enumerate(board):
 		print(count, "".join(row))
 
-board(just_display = True)
+
+board(just_display=True)
 
 
 def game():
-	p_one_x = gt.getpass('In which column would you like to put your piece P1? ')
-	p_one_y = gt.getpass('In which row would you like to put your piece P1? ')
-	p_two_x = gt.getpass('In which column would you like to put your piece P2? ')
-	p_two_y = gt.getpass('In which row would you like to put your piece P2? ')
+	p1_x = gt.getpass('In which column would you like to put your piece P1? ')
+	p1_y = gt.getpass('In which row would you like to put your piece P1? ')
+	p2_x = gt.getpass('In which column would you like to put your piece P2? ')
+	p2_y = gt.getpass('In which row would you like to put your piece P2? ')
 	board()
+
 
 game()
