@@ -1,3 +1,6 @@
+import getpass as gt
+
+
 def rules_and_control():
 	print("""Welcome to Tic Tac Toe!
 The rules are simple, get 3 in a row with your piece to win.
@@ -28,11 +31,12 @@ def board(p_two_y = 0, p_two_x = 0, p_one_x = 0, p_one_y = 0, just_display = Fal
 
 board(just_display = True)
 
+
 def game():
-	p_one_x = input('In which column would you like to put your piece P1? ')
-	p_one_y = input('In which row would you like to put your piece P1? ')
-	p_two_x = input('In which column would you like to put your piece P2? ')
-	p_two_y = input('In which row would you like to put your piece P2? ')
+	p_one_x = gt.getpass('In which column would you like to put your piece P1? ')
+	p_one_y = gt.getpass('In which row would you like to put your piece P1? ')
+	p_two_x = gt.getpass('In which column would you like to put your piece P2? ')
+	p_two_y = gt.getpass('In which row would you like to put your piece P2? ')
 	board()
 
 game()
